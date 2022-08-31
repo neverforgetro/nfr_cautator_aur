@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+:root {
+  --white: 0;
+  --greyLight-2: hsl(230, 60%, 50%);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  overflow: hidden;
+}
+
+.poza {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  background-image: url("bg.png");
+  background-repeat: no-repeat;
+  background-size: 40.8vw;
+  width: 25vw;
+  height: 25vw;
+  left: 9vw;
+  top: 14.6vw;
+  filter: drop-shadow(-0.25vw 0.5vw 0.5vw black);
+}
+
+.container {
+  min-height: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.components {
+  width: 49vw;
+  height: 25vw;
+  border-radius: 0.2vw;
+  box-shadow: 0.2vw 0.2vw 1.119vw var(--greyLight-2), -0.16vw -0.16vw 1.44vw var(--white);
+  padding: 5vw;
+  display: grid;
+  grid-template-columns: 14.08vw 15.2vw 16.319vw;
+  grid-template-rows: repeat(autofit, -webkit-min-content);
+  grid-template-rows: repeat(autofit, min-content);
+  grid-column-gap: 4vw;
+  grid-row-gap: 2vw;
+  align-items: center;
+  background-color: rgb(3, 240, 252, 0.2);
+}
+
+span {
+
+  font: 700 4em/1 "Oswald", sans-serif;
+  letter-spacing: 0;
+  padding: 0.2vw 0 0.26vw;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 0 0 4vw rgba(255,255,255,.5);
+
+}
+
+.button-1{
+  color: white;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 999;
+  position: absolute;
+  background-color: #071982;
+  font-size: 0.75vw;
+  width: 7.5vw;
+  height: 2.16vw;
+  font-weight: 999;
+  text-align: center;
+  border: 0.05vw solid #fff;
+  border-radius: 0.2vw;
+  transform: skewX(-20deg);  
+  left: 43vw;
+  top: 29vw;
+  overflow: hidden!important;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.button-1:hover{
+  border: 0.05vw solid #0a5500;
+  color: #15ff00!important;
+  filter: drop-shadow(0vw 0vw 0.75vw #15ff00);
+}
+.button-1::before {
+  content: '';
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: #0a5500;
+  position: absolute;
+  -ms-transform: skewX(-20deg);
+  -webkit-transform: skewX(-20deg); 
+  transform: skewX(-20deg);   
+  left: -10%;
+  opacity: 1;
+  top: 0;
+  z-index: -12;
+  -moz-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+-o-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+-webkit-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+filter: drop-shadow(0vw 0vw 0.75vw #0a5500);
+} 
+
+.button-1::after {
+  content: '';
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: #80ffd3;
+  position: absolute;
+-ms-transform: skewX(-20deg);
+  -webkit-transform: skewX(-20deg); 
+  transform: skewX(-20deg);   
+  left: -10%;
+  opacity: 0;
+  top: 0;
+  z-index: -15;
+  -webkit-transition: all .94s cubic-bezier(.2,.95,.57,.99);
+  -moz-transition: all .4s cubic-bezier(.2,.95,.57,.99);
+  -o-transition: all .4s cubic-bezier(.2,.95,.57,.99);
+  transition: all .4s cubic-bezier(.2,.95,.57,.99);
+  box-shadow: 0.1vw 0vw 0.7vw rgba(0,0,0,.6);
+  filter: drop-shadow(0vw 0vw 0.75vw #0a5500);
+}
+.button-1:hover::before, .button-1:hover::before{
+opacity:1;
+width: 116%;
+
+}
+.button-1:hover::after, .button-1:hover::after{
+opacity:1;
+width: 120%;
+}
+
+.button-2{
+  color: white;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 999;
+  position: absolute;
+  background-color: #071982;
+  font-size: 0.80vw;
+  width: 7.5vw;
+  height: 2.16vw;
+  font-weight: 999;
+  text-align: center;
+  border: 0.05vw solid #fff;
+  border-radius: 0.2vw;
+  right: 40vw;
+  top: 29vw;
+  transform: skewX(-20deg);   
+  overflow: hidden!important;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.button-2:hover{
+  border: 0.05vw solid rgb(95, 0, 0);
+  color: red!important;
+  filter: drop-shadow(0vw 0vw 0.5vw red);
+}
+.button-2::before {
+  content: '';
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: rgb(95, 0, 0);
+  position: absolute;
+  -ms-transform: skewX(-20deg);
+  -webkit-transform: skewX(-20deg); 
+  transform: skewX(-20deg);   
+  left: -10%;
+  opacity: 1;
+  top: 0;
+  z-index: -12;
+  -moz-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+-o-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+-webkit-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+filter: drop-shadow(0vw 0vw 0.75vw rgb(95, 0, 0));
+} 
+
+.button-2::after {
+  content: '';
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: #d44f02;
+  position: absolute;
+-ms-transform: skewX(-20deg);
+  -webkit-transform: skewX(-20deg); 
+  transform: skewX(-20deg);   
+  left: -10%;
+  opacity: 0;
+  top: 0;
+  z-index: -15;
+  -webkit-transition: all .94s cubic-bezier(.2,.95,.57,.99);
+  -moz-transition: all .4s cubic-bezier(.2,.95,.57,.99);
+  -o-transition: all .4s cubic-bezier(.2,.95,.57,.99);
+  transition: all .4s cubic-bezier(.2,.95,.57,.99);
+  box-shadow: 0.1vw 0vw 0.7vw rgba(0,0,0,.6);
+  filter: drop-shadow(0vw 0vw 0.75vw rgb(95, 0, 0));
+}
+.button-2:hover::before, .button-2:hover::before{
+opacity:1;
+width: 116%;
+}
+.button-2:hover::after, .button-2:hover::after{
+opacity:1;
+width: 120%;
+}
+
+
+p {
+  position: absolute;
+  text-transform: uppercase;
+  letter-spacing: 0.4vw;
+  display: inline-block;
+ 
+  padding: 1.2vw 0vw;
+  position: absolute;
+  top: 12.5vw;
+  left: 55vw;
+  width: 32vw;
+  margin: 0 0 0 -16vw;
+  filter: drop-shadow(-0.25vw 0.5vw 0.5vw hsl(230, 60%, 50%));
+}
+p span {
+  position: absolute;
+  font: 700 3.2vw/1 "Oswald", sans-serif;
+  font-family: 'Aboreto', cursive;
+  font-weight: 999;
+  letter-spacing: 0;
+  padding: 0.2vw 0 0.26vw;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 0 0 4vw rgba(255, 255, 255, 0.5);
+  
+  /* Clip Background Image */
+  background: url(https://media.discordapp.net/attachments/969672787990048838/1010309995574874142/output-onlinepngtools6.png) repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Animate Background Image */
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 20s linear infinite;
+  /* Activate hardware acceleration for smoother animations */
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+}
+
+/* Animate Background Image */
+@-webkit-keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 50% 50%;
+  }
+}
+
+.apasatext{
+  position: absolute;
+  color: hsl(230, 60%, 50%);
+  font-family: 'Silkscreen', cursive;
+  font-size: 0.6vw;
+  font-weight: 999;
+  top: 32vw;
+  left: 44.5vw;
+}
